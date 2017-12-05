@@ -1,0 +1,73 @@
+* Palayutm's Code Library
+** Combinatorics
+*** DONE Binomial Coefficient
+*** DONE Catalan
+*** TODO Matrix Tree
+*** TODO Pólya Enumeration Theorem
+** Data Structure
+*** TODO 2-sat
+*** DONE Centroid Decomposition
+*** TODO Compressed Tree
+*** TODO Dancing Links
+*** DONE Disjoint Set
+*** TODO Heavy Light Decomposition
+*** DONE Interval Tree
+*** TODO KD-Tree
+*** TODO Link Cut Tree
+*** DONE Matrix
+*** DONE OrderStatisticTree(pb_ds)
+*** DONE Persistent Interval Tree
+*** DONE Sparse Table
+*** TODO Topological Sorting
+*** TODO Treap
+** Graph
+*** Bipartite Matching
+**** TODO Hungarian algorithm
+**** TODO Hopcroft-Karp algorithm
+**** TODO Kuhn-Munkres algorithm
+*** DONE Euler Walk(directed)
+tested on [[http://codeforces.com/contest/508/problem/D][508D. Tanya and Password]]
+*** Flow Network
+**** TODO Dinic’s algorithm
+**** TODO Improved Shortest Augmenting Path(ISAP)
+*** DONE Least Common Ancestors
+*** Minimum Cost Flow
+**** TODO spfa mcf
+**** TODO zkw mcf
+*** DONE Strongly Connected Components(Tarjan)
+tested on [[http://codeforces.com/problemset/problem/402/E][402E. Strictly Positive Matrix]]
+** Misc
+*** DONE IO utils
+** Number Theory
+*** TODO Baby Step, Giant Step
+*** TODO Chinese Remainder Theorem
+*** DONE Euler’s Totient Function
+*** DONE Extend Euclid
+*** TODO Factorization(Pollard's rho)
+*** DONE Inverse
+*** TODO Mobius
+*** TODO Number-theoretic transform
+[[https://en.wikipedia.org/wiki/Discrete_Fourier_transform_(general)#Number-theoretic_transform]]
+*** DONE Prime Count Function
+*** DONE Prime Sieve
+*** DONE Primelity Test
+** Numerical
+*** TODO Determinant
+*** TODO Fast Fourier Transform
+[[https://en.wikipedia.org/wiki/Fast_Fourier_transform]]
+*** TODO Fast Walsh–Hadamard transform
+[[https://en.wikipedia.org/wiki/Fast_Walsh%E2%80%93Hadamard_transform]]
+*** TODO Gaussian Elimination
+*** TODO Golden Section Search
+*** TODO Integrate(simpson)
+** String
+*** TODO Aho-Corasick Automaton
+*** TODO Deterministic Finite Automaton
+*** TODO Extend KMP
+*** TODO Hashing
+*** DONE KMP
+*** DONE Manacher
+tested on hdu3068
+*** DONE Palindromic Tree
+*** TODO Suffix Array
+*** TODO Suffix Automaton
