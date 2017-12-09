@@ -2,13 +2,12 @@
 
 using namespace std;
 
-template<class T>
-struct SparseTable {
+template <class T> struct SparseTable {
   std::vector<std::vector<T>> f;
   std::vector<int> lg;
-  SparseTable(){}
+  SparseTable() {}
   SparseTable(const std::vector<T> &a) { init(a); }
-  void init(const std::vector<T>& a) {
+  void init(const std::vector<T> &a) {
     int n = a.size();
     lg.assign(n + 1, 0);
     for (int i = 1, j = 0; i <= n; i++) {

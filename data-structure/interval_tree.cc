@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 
-template<class T>
-struct IntervalTree {
+template <class T> struct IntervalTree {
   std::vector<T> a, b;
   int n;
 
@@ -11,18 +10,12 @@ struct IntervalTree {
     n = size;
   }
   // modify here
-  void pushDown(int l, int r, int p) {
-    
-  }
+  void pushDown(int l, int r, int p) {}
   // modify here
-  void pushUp(int l, int r, int p) {
-    a[p] = min(a[p * 2], a[p * 2 + 1]);
-  }
-  
-  void update(int L, int R, T val) {
-    update(1, n, 1, L, R, val);
-  }
-  
+  void pushUp(int l, int r, int p) { a[p] = min(a[p * 2], a[p * 2 + 1]); }
+
+  void update(int L, int R, T val) { update(1, n, 1, L, R, val); }
+
   void update(int l, int r, int p, int L, int R, T val) {
     if (l >= L && r <= R) {
       // modify here
@@ -38,9 +31,7 @@ struct IntervalTree {
     pushUp(l, r, p);
   }
 
-  T query(int L, int R) {
-    return query(1, n, 1, L, R);
-  }
+  T query(int L, int R) { return query(1, n, 1, L, R); }
 
   T query(int l, int r, int p, int L, int R) {
     if (l >= L && r <= R) {

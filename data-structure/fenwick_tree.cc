@@ -3,9 +3,7 @@
 struct FenwickTree {
   std::vector<int> in;
   int N;
-  FenwickTree(int N) : N(N) {
-    in.assign(N + 1, 0);
-  }
+  FenwickTree(int N) : N(N), in(N) {}
   int lowbit(int n) {return n & (-n);}
   void update(int p, int val) {
     for (int i = p; i <= N; i += lowbit(i)) {

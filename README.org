@@ -5,38 +5,57 @@
 *** TODO Matrix Tree
 *** TODO Pólya Enumeration Theorem
 ** Data Structure
-*** TODO 2-sat
-*** DONE Centroid Decomposition
-*** TODO Compressed Tree
 *** TODO Dancing Links
-*** DONE Disjoint Set
-*** TODO Heavy Light Decomposition
-*** DONE Interval Tree
+*** TODO Disjoint Set on Tree
 *** TODO KD-Tree
 *** TODO Link Cut Tree
+*** TODO Treap
+*** DONE Disjoint Set
+*** DONE Disjoint Set(with rollback)
+*** DONE Hash Map
+*** DONE Interval Tree
 *** DONE Matrix
 *** DONE OrderStatisticTree(pb_ds)
 *** DONE Persistent Interval Tree
 *** DONE Sparse Table
-*** TODO Topological Sorting
-*** TODO Treap
+** Dynamic Programming
+[[http://codeforces.com/blog/entry/8219]]
+*** TODO Convex Optimization
+*** TODO Divide and Conquer Optimization
+** Generater
+*** TODO Array
+*** TODO Tree
+*** TODO Graph
+** Geometry
+*** DONE Point in Segment
+*** DONE Inside Polygon
 ** Graph
+*** TODO 2-sat
 *** Bipartite Matching
 **** TODO Hungarian algorithm
 **** TODO Hopcroft-Karp algorithm
 **** TODO Kuhn-Munkres algorithm
+*** DONE Centroid Decomposition
+*** TODO Compressed Tree
 *** DONE Euler Walk(directed)
 tested on [[http://codeforces.com/contest/508/problem/D][508D. Tanya and Password]]
 *** Flow Network
-**** TODO Dinic’s algorithm
-**** TODO Improved Shortest Augmenting Path(ISAP)
+**** DONE Dinic’s algorithm
+**** DONE Improved Shortest Augmenting Path(ISAP)
+*** TODO Heavy Light Decomposition
 *** DONE Least Common Ancestors
 *** Minimum Cost Flow
-**** TODO spfa mcf
+**** DONE spfa mcf
 **** TODO zkw mcf
 *** DONE Strongly Connected Components(Tarjan)
 tested on [[http://codeforces.com/problemset/problem/402/E][402E. Strictly Positive Matrix]]
+*** DONE Topological Sorting
 ** Misc
+*** TODO CDQ
+*** TODO Divide and Conquer on All Query
+*** TODO Mo's Algorithm
+*** TODO Mo's Algorithm on Trees
+*** DONE Big Integer
 *** DONE IO utils
 ** Number Theory
 *** TODO Baby Step, Giant Step
@@ -52,6 +71,7 @@ tested on [[http://codeforces.com/problemset/problem/402/E][402E. Strictly Posit
 *** DONE Prime Sieve
 *** DONE Primelity Test
 ** Numerical
+*** DONE Polynomial Interpolation
 *** TODO Determinant
 *** TODO Fast Fourier Transform
 [[https://en.wikipedia.org/wiki/Fast_Fourier_transform]]

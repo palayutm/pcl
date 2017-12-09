@@ -3,9 +3,8 @@
 struct DisjointSet {
   std::vector<int> pre;
 
-  DisjointSet(int n) {
-    pre.assign(n + 1, 0);
-    for (int i = 0; i <= n; i++) {
+  DisjointSet(int n) : pre(n){
+    for (int i = 0; i < n; i++) {
       pre[i] = i;
     }
   }
