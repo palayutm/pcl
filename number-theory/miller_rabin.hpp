@@ -1,7 +1,5 @@
  #include <bits/stdc++.h>
 
-using namespace std;
-
 namespace miller_rabin {
 bool isPrime(long long n) {
   if (n <= 1) return false;

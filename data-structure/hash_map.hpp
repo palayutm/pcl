@@ -103,17 +103,3 @@ private:
   _Hash h;
 };
 } // namespace oaht
-
-using namespace std;
-
-int main(int argc, char *argv[]) {
-  oaht::HashMap<int, int> hm;
-  hm[1] = 5;
-  hm[19942425] = 7;
-  cout << hm.count(19942425) << endl;
-  hm.erase(19942425);
-  cout << hm.count(19942425) << endl;
-  cout << hm[19942425] << endl;
-  cout << hm.count(19942425) << endl;
-  return 0;
-}

@@ -18,8 +18,3 @@ struct Euler {
     path.push_back(u);
   }
 };
-
-int main(int argc, char *argv[]) {
-  
-  return 0;
-}

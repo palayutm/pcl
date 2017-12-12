@@ -1,16 +1,14 @@
 #include <bits/stdc++.h>
 
-using namespace std;
-
 struct Matrix {
   static constexpr int md = 1e9 + 7;
   int rowCount, columnCount;
-  vector<vector<int>> a;
+  std::vector<std::vector<int>> a;
 
   Matrix(int rowCount, int columnCount) {
     this->rowCount = rowCount;
     this->columnCount = columnCount;
-    a.assign(rowCount, vector<int>(columnCount));
+    a.assign(rowCount, std::vector<int>(columnCount));
   }
   
   static Matrix identityMatrix(int size) {

@@ -35,19 +35,6 @@ struct Lucas {
     return n && k ? (long long)bn.choose(n % md, k % md) * choose(n / md, k / md) % md : 1;
   }
 };
-
-int main(int argc, char *argv[]) {
-  const int mod = 1e9 + 7;
-  Binomial bn(10, mod);
-  for (int i = 0; i <= 10; ++i) {
-    for (int j = 0; j <= i; ++j) {
-      std::cout << bn.choose(i, j) << " ";
-    }
-    std::cout << std::endl;
-  }
-  return 0;
-}
-
 /*
 1 
 1 1 

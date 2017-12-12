@@ -6,7 +6,7 @@ struct FenwickTree {
   FenwickTree(int N) : N(N), in(N) {}
   int lowbit(int n) {return n & (-n);}
   void update(int p, int val) {
-    for (int i = p; i <= N; i += lowbit(i)) {
+    for (int i = p; i < N; i += lowbit(i)) {
       in[i] += val;
     }
   }

@@ -1,11 +1,9 @@
 #include <bits/stdc++.h>
 
-using namespace std;
-
 struct PalindromicTree {
-  vector<vector<int>> ch;
-  vector<int> fail, len;
-  string S;
+  std::vector<std::vector<int>> ch;
+  std::vector<int> fail, len;
+  std::string S;
   int last;
 
   PalindromicTree() {
@@ -17,7 +15,7 @@ struct PalindromicTree {
 
   int newNode(int l) {
     int sz = ch.size();
-    ch.push_back(vector<int>(26));
+    ch.push_back(std::vector<int>(26));
     len.push_back(l);
     fail.push_back(0);
     return sz;
@@ -41,7 +39,7 @@ struct PalindromicTree {
     last = ch[cur][c];
   }
 };
-
+/*
 int main(int argc, char *argv[]) {
   PalindromicTree pt;
   for (auto c : string("abaaba")) {
@@ -51,7 +49,6 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
-/*
  *   a b a a b a
  *   1 1 3 2 4 6
  *

@@ -5,11 +5,13 @@
 *** TODO Matrix Tree
 *** TODO Pólya Enumeration Theorem
 ** Data Structure
+*** TODO Sqrt Decomposition
 *** TODO Dancing Links
-*** TODO Disjoint Set on Tree
+*** TODO DSU on Tree
 *** TODO KD-Tree
 *** TODO Link Cut Tree
-*** TODO Treap
+*** DONE Treap
+*** DONE Treap Non-Rotating
 *** DONE Disjoint Set
 *** DONE Disjoint Set(with rollback)
 *** DONE Hash Map
@@ -35,8 +37,8 @@
 **** TODO Hungarian algorithm
 **** TODO Hopcroft-Karp algorithm
 **** TODO Kuhn-Munkres algorithm
-*** DONE Centroid Decomposition
-*** TODO Compressed Tree
+*** TODO Centroid Decomposition
+*** DONE Compressed Tree
 *** DONE Euler Walk(directed)
 tested on [[http://codeforces.com/contest/508/problem/D][508D. Tanya and Password]]
 *** Flow Network
@@ -73,9 +75,9 @@ tested on [[http://codeforces.com/problemset/problem/402/E][402E. Strictly Posit
 ** Numerical
 *** DONE Polynomial Interpolation
 *** TODO Determinant
-*** TODO Fast Fourier Transform
+*** DONE Fast Fourier Transform
 [[https://en.wikipedia.org/wiki/Fast_Fourier_transform]]
-*** TODO Fast Walsh–Hadamard transform
+*** DONE Fast Walsh–Hadamard transform
 [[https://en.wikipedia.org/wiki/Fast_Walsh%E2%80%93Hadamard_transform]]
 *** TODO Gaussian Elimination
 *** TODO Golden Section Search

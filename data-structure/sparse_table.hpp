@@ -1,7 +1,5 @@
 #include <bits/stdc++.h>
 
-using namespace std;
-
 template <class T> struct SparseTable {
   std::vector<std::vector<T>> f;
   std::vector<int> lg;

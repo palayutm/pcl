@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
 
-using namespace std;
-
 struct DSU {
-  vector<int> pre, rank;
-  vector<int> op;
+  std::vector<int> pre, rank;
+  std::vector<int> op;
 
   DSU(int n) : rank(n), pre(n) {
     for (int i = 0; i < n; i++) {
@@ -19,7 +17,7 @@ struct DSU {
     if (fu == fv)
       return;
     if (rank[fu] > rank[fv]) {
-      swap(fu, fv);
+      std::swap(fu, fv);
     }
     if (rank[fu] == rank[fv]) {
       rank[fv]++;

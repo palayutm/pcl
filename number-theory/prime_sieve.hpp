@@ -1,11 +1,9 @@
 #include <bits/stdc++.h>
 
-using namespace std;
-
-pair<vector<bool>, vector<int>> primeSieve(int n) {
-  vector<bool> is_prime(n + 1, true);
+std::pair<std::vector<bool>, std::vector<int>> primeSieve(int n) {
+  std::vector<bool> is_prime(n + 1, true);
   is_prime[0] = is_prime[1] = false;
-  vector<int> prime_list;
+  std::vector<int> prime_list;
   for (int i = 2; i <= n; i++) {
     if (is_prime[i]) {
       prime_list.push_back(i);

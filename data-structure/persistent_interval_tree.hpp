@@ -1,14 +1,12 @@
 #include <bits/stdc++.h>
 
-using namespace std;
-
 struct PersistentIntervalTree {
-  vector<int> a, ls, rs;
+  std::vector<int> a, ls, rs;
   int tail;
   int N;
 
   PersistentIntervalTree(int n) {
-    ls = rs = a = vector<int>(n * 20);
+    ls = rs = a = std::vector<int>(n * 20);
     tail = 1;
     N = n;
   }
@@ -51,10 +49,12 @@ struct PersistentIntervalTree {
     return sum;
   }
 };
+/*
+using namespace std;
 
 int main(int argc, char *argv[]) {
   PersistentIntervalTree pit(10);
-  vector<int> a(5, 0);
+  std::vector<int> a(5, 0);
   pit.build(a[0]);
   pit.update(a[0], a[1], 2, 2);
   pit.update(a[1], a[2], 3, 3);
@@ -62,3 +62,4 @@ int main(int argc, char *argv[]) {
   cout << pit.query(a[2], 1, 10) << endl;
   return 0;
 }
+*/

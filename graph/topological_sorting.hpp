@@ -30,10 +30,3 @@ vector<int> toposort(vector<vector<int>> g, int base = 1) {
   return ret.size() == n - base ? ret : vector<int>();
 }
 
-int main(int argc, char *argv[]) {
-  vector<vector<int>> a{{}, {2, 3}, {}, {2}};
-  for (auto x : toposort(a)) {
-    cout << x << " ";
-  }
-  return 0;
-}

@@ -1,7 +1,5 @@
 #include <bits/stdc++.h>
 
-using namespace std;
-
 int totient(int n){
   int rea = n;
   for (int i = 2; i * i <= n; i++) {
@@ -14,8 +12,8 @@ int totient(int n){
   return rea;
 }
 
-vector<int> preTotient(int n){
-  vector<int> phi(n + 1);
+std::vector<int> preTotient(int n){
+  std::vector<int> phi(n + 1);
   for (int i = 1; i <= n; i++)  phi[i] = i;
   for (int i = 2; i <= n; i += 2)  phi[i] /= 2;
   for (int i = 3; i <= n; i += 2) {
@@ -26,12 +24,4 @@ vector<int> preTotient(int n){
     }
   }
   return phi;
-}
-
-int main(int argc, char *argv[]) {
-  auto vec = preTotient(100000);
-  for (int i = 1; i <= 100000; ++i) {
-    assert(vec[i] == totient(i));
-  }
-  return 0;
 }

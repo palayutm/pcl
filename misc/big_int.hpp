@@ -93,11 +93,3 @@ struct BigInt {
     }
   }
 };
-
-int main(int argc, char *argv[]) {
-  BigInt a("12345678910"), b("2345678910");
-  (a * b).print();
-  puts("");
-  (a * b * a).print();
-  return 0;
-}
