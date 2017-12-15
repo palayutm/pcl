@@ -10,6 +10,8 @@ struct Matrix {
     this->columnCount = columnCount;
     a.assign(rowCount, std::vector<int>(columnCount));
   }
+
+  Matrix(const std::vector<std::vector<int>>& a) : a(a), rowCount(a.size()), columnCount(a[0].size()) {}
   
   static Matrix identityMatrix(int size) {
     Matrix result(size, size);

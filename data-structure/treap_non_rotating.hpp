@@ -4,27 +4,19 @@ namespace treap {
 template <class T> struct Node {
   int sz, fix;
   T key;
-  bool lazy;
   Node *ch[2];
-  Node(T key) : sz(1), key(key), fix(rand()), lazy(false) {
+  Node(T key) : sz(1), key(key), fix(rand()) {
     ch[0] = ch[1] = nullptr;
   }
   void pushup() {
     sz = 1;
     for (int i = 0; i < 2; i++) {
-      if (ch[i]) {
+      if (ch[i] != nullptr) {
         sz += ch[i]->sz;
       }
     }
   }
-  void pushdown() {
-    if (lazy) {
-      lazy = false;
-      std::swap(ch[0], ch[1]);
-      if (ch[0] != nullptr) ch[0]->lazy ^= 1;
-      if (ch[1] != nullptr) ch[1]->lazy ^= 1;
-    }
-  }
+  void pushdown() {}
 };
 template <class T> Node<T> *merge(Node<T> *A, Node<T> *B) {
   if (B == nullptr) return A;
@@ -45,7 +37,7 @@ template <class T> std::pair<Node<T> *, Node<T> *> split(Node<T> *A, int k) {
   if (A == nullptr) return {nullptr, nullptr};
   A->pushdown();
   std::pair<Node<T> *, Node<T> *> ret;
-  if ((A->ch[0] ? A->ch[0]->sz : 0) >= k) {
+  if ((A->ch[0] != nullptr ? A->ch[0]->sz : 0) >= k) {
     ret = split(A->ch[0], k);
     A->ch[0] = ret.second;
     A->pushup();
