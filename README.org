@@ -86,7 +86,7 @@ tested on [[http://codeforces.com/problemset/problem/402/E][402E. Strictly Posit
 *** TODO Aho-Corasick Automaton
 *** TODO Deterministic Finite Automaton
 *** TODO Extend KMP
-*** TODO Hashing
+*** DONE Hashing
 *** DONE KMP
 *** DONE Manacher
 tested on hdu3068

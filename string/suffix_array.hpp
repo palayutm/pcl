@@ -20,12 +20,14 @@ struct SuffixArray {
       for (i = 0; i < n; i++) ws[wv[i]]++;
       for (i = 1; i < m; i++) ws[i] += ws[i - 1];
       for (i = n - 1; i >= 0; i--) sa[--ws[wv[i]]] = y[i];
-      for (t = x, x = y, y = t, p = 1, x[sa[0]] = 0, i = 1; i < n; i++)
+      for (t = x, x = y, y = t, p = 1, x[sa[0]] = 0, i = 1; i < n; i++) {
         x[sa[i]] = (y[sa[i - 1]] == y[sa[i]] && y[sa[i - 1] + j] == y[sa[i] + j]) ? p - 1 : p++;
+      }
     }
     --n;
     for (i = 1; i <= n; i++) rank[sa[i]] = i;
-    for (i = 0; i < n; height[rank[i++]] = k)
-    for (k ? k-- : 0, j = sa[rank[i] - 1]; r[i + k] == r[j + k]; k++);
+    for (i = 0; i < n; height[rank[i++]] = k) {
+      for (k ? k-- : 0, j = sa[rank[i] - 1]; r[i + k] == r[j + k]; k++);
+    }
   }
 };
