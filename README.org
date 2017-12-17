@@ -5,21 +5,21 @@
 *** TODO Matrix Tree
 *** TODO Pólya Enumeration Theorem
 ** Data Structure
-*** TODO Sqrt Decomposition
 *** TODO Dancing Links
-*** TODO DSU on Tree
-*** TODO KD-Tree
-*** TODO Link Cut Tree
-*** DONE Treap
-*** DONE Treap Non-Rotating
 *** DONE Disjoint Set
 *** DONE Disjoint Set(with rollback)
+*** TODO DSU on Tree
 *** DONE Hash Map
 *** DONE Interval Tree
+*** TODO KD-Tree
+*** TODO Link Cut Tree
 *** DONE Matrix
 *** DONE OrderStatisticTree(pb_ds)
 *** DONE Persistent Interval Tree
 *** DONE Sparse Table
+*** TODO Sqrt Decomposition
+*** DONE Treap
+*** DONE Treap Non-Rotating
 ** Dynamic Programming
 [[http://codeforces.com/blog/entry/8219]]
 *** TODO Convex Optimization
@@ -29,8 +29,8 @@
 *** TODO Tree
 *** TODO Graph
 ** Geometry
-*** DONE Point in Segment
 *** DONE Inside Polygon
+*** DONE Point in Segment
 ** Graph
 *** TODO 2-sat
 *** Bipartite Matching
@@ -53,12 +53,12 @@ tested on [[http://codeforces.com/contest/508/problem/D][508D. Tanya and Passwor
 tested on [[http://codeforces.com/problemset/problem/402/E][402E. Strictly Positive Matrix]]
 *** DONE Topological Sorting
 ** Misc
+*** DONE Big Integer
 *** TODO CDQ
 *** TODO Divide and Conquer on All Query
+*** DONE IO utils
 *** TODO Mo's Algorithm
 *** TODO Mo's Algorithm on Trees
-*** DONE Big Integer
-*** DONE IO utils
 ** Number Theory
 *** TODO Baby Step, Giant Step
 *** TODO Chinese Remainder Theorem
@@ -84,7 +84,6 @@ tested on [[http://codeforces.com/problemset/problem/402/E][402E. Strictly Posit
 *** TODO Integrate(simpson)
 ** String
 *** TODO Aho-Corasick Automaton
-*** TODO Deterministic Finite Automaton
 *** TODO Extend KMP
 *** DONE Hashing
 *** DONE KMP
@@ -92,4 +91,5 @@ tested on [[http://codeforces.com/problemset/problem/402/E][402E. Strictly Posit
 tested on hdu3068
 *** DONE Palindromic Tree
 *** DONE Suffix Array
-*** TODO Suffix Automaton
+*** DONE Suffix Automaton
+[[https://huntzhan.org/suffix-automaton-tutorial/][Suffix Automaton Tutorial]]
