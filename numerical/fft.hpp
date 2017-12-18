@@ -1,40 +1,55 @@
 #include <bits/stdc++.h>
 
-namespace fft {
 using namespace std;
+
+namespace fft {
+typedef complex<double> Complex;
 const double PI = acos(-1);
-typedef valarray<complex<double>> carray;
-void fft(valarray<complex<double>> &x, valarray<complex<double>> &roots) {
-  int N = x.size();
-  if (N <= 1) return;
-  carray even = x[slice(0, N / 2, 2)];
-  carray odd = x[slice(1, N / 2, 2)];
-  carray rs = roots[slice(0, N / 2, 2)];
-  fft(even, rs);
-  fft(odd, rs);
-  for (int k = 0; k < N / 2; k++) {
-    auto t = roots[k] * odd[k];
-    x[k] = even[k] + t;
-    x[k + N / 2] = even[k] - t;
+
+int revv(int x, int bits) {
+  int ret = 0;
+  for (int i = 0; i < bits; i++) {
+    ret <<= 1, ret |= x & 1, x >>= 1;
+  }
+  return ret;
+}
+
+void fft(vector<Complex> &a, bool rev = false) {
+  int n = a.size(), bits = 32 - __builtin_clz(n) - 1;
+  for (int i = 0; i < n; i++) {
+    int j = revv(i, bits);
+    if (i < j) swap(a[i], a[j]);
+  }
+  for (int k = 1; k < n; k <<= 1) {
+    Complex wn = {cos(PI / k), rev ? -sin(PI / k) : sin(PI / k)};
+    for (int i = 0; i < n; i += 2 * k) {
+      Complex w = {1, 0};
+      for (int j = 0; j < k; j++, w *= wn) {
+        Complex x = a[i + j], y = w * a[i + j + k];
+        a[i + j] = x + y, a[i + j + k] = x - y;
+      }
+    }
+  }
+  if (rev) {
+    for (int i = 0; i < n; i++) a[i] /= n;
   }
 }
 
-vector<double> convolution(const vector<double> &a, const vector<double> &b) {
-  int s = (int)a.size() + (int)b.size() - 1, L = 32 - __builtin_clz(s), n = 1 << L;
-  if (s <= 0) return {};
-  carray av(n), bv(n), roots(n);
+vector<long long> convolution(const vector<int> &a, const vector<int> &b) {
+  int sz = (int)a.size() + (int)b.size() - 1;
+  int L = sz > 1 ? 32 - __builtin_clz(sz - 1) : 0, n = 1 << L;
+  vector<Complex> av(n), bv(n);
+  copy(a.begin(), a.end(), av.begin());
+  copy(b.begin(), b.end(), bv.begin());
+  fft(av), fft(bv);
   for (int i = 0; i < n; i++) {
-    roots[i] = polar(1.0, -2 * PI * i / n);
+    av[i] *= bv[i];
   }
-  copy(a.begin(), a.end(), begin(av)); fft(av, roots);
-  copy(b.begin(), b.end(), begin(bv)); fft(bv, roots);
-  roots = roots.apply(conj);
-  carray cv = av * bv;
-  fft(cv, roots);
-  vector<double> c(s);
-  for (int i = 0; i < s; i++) {
-    c[i] = cv[i].real() / n;
+  fft(av, true);
+  vector<long long> c(sz);
+  for (int i = 0; i < sz; i++) {
+    c[i] = av[i].real() + 0.5;
   }
   return c;
 }
-}
+} // namespace fft

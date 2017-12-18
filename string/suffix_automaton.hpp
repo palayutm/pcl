@@ -1,12 +1,10 @@
 #include <bits/stdc++.h>
 
-using namespace std;
-
 struct SuffixAutomaton {
-  vector<vector<int>> ch;
-  vector<int> len, link;
+  std::vector<std::vector<int>> ch;
+  std::vector<int> len, link;
   int head, last;
-  SuffixAutomaton(string s = "") : ch(2, vector<int>(26)), len(2), link(2) {
+  SuffixAutomaton(std::string s = "") : ch(2, std::vector<int>(26)), len(2), link(2) {
     head = last = 1;
     for (auto x : s) {
       add(x - 'a');
@@ -14,7 +12,7 @@ struct SuffixAutomaton {
   }
   void add(int x) {
     int p = ch.size(), mid;
-    ch.push_back(vector<int>(26));
+    ch.push_back(std::vector<int>(26));
     len.push_back(len[last] + 1);
     link.push_back(0);
     mid = last, last = p;

@@ -9,6 +9,8 @@
 *** DONE Disjoint Set
 *** DONE Disjoint Set(with rollback)
 *** TODO DSU on Tree
+*** DONE Fenwick Tree
+*** DONE Fenwick Tree Range Update
 *** DONE Hash Map
 *** DONE Interval Tree
 *** TODO KD-Tree
@@ -18,6 +20,7 @@
 *** DONE Persistent Interval Tree
 *** DONE Sparse Table
 *** TODO Sqrt Decomposition
+*** TODO std::rope
 *** DONE Treap
 *** DONE Treap Non-Rotating
 ** Dynamic Programming
@@ -34,7 +37,7 @@
 ** Graph
 *** TODO 2-sat
 *** Bipartite Matching
-**** TODO Hungarian algorithm
+**** DONE Hungarian algorithm
 **** TODO Hopcroft-Karp algorithm
 **** TODO Kuhn-Munkres algorithm
 *** TODO Centroid Decomposition
@@ -67,23 +70,27 @@ tested on [[http://codeforces.com/problemset/problem/402/E][402E. Strictly Posit
 *** TODO Factorization(Pollard's rho)
 *** DONE Inverse
 *** TODO Mobius
-*** TODO Number-theoretic transform
+*** DONE Number-theoretic transform
 [[https://en.wikipedia.org/wiki/Discrete_Fourier_transform_(general)#Number-theoretic_transform]]
 *** DONE Prime Count Function
 *** DONE Prime Sieve
 *** DONE Primelity Test
 ** Numerical
+*** TODO Complex
 *** DONE Polynomial Interpolation
 *** TODO Determinant
 *** DONE Fast Fourier Transform
 [[https://en.wikipedia.org/wiki/Fast_Fourier_transform]]
+[[http://web.cs.iastate.edu/~cs577/handouts/polymultiply.pdf]]
+[[https://medium.com/@aiswaryamathur/understanding-fast-fourier-transform-from-scratch-to-solve-polynomial-multiplication-8018d511162f]]
+*** TODO Fast Fourier Transform Optimize
 *** DONE Fast Walsh–Hadamard transform
 [[https://en.wikipedia.org/wiki/Fast_Walsh%E2%80%93Hadamard_transform]]
 *** TODO Gaussian Elimination
 *** TODO Golden Section Search
 *** TODO Integrate(simpson)
 ** String
-*** TODO Aho-Corasick Automaton
+*** DONE Aho-Corasick
 *** TODO Extend KMP
 *** DONE Hashing
 *** DONE KMP
