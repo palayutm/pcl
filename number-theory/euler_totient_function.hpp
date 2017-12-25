@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 
 long long totient(long long n){
-  int rea = n;
+  long long rea = n;
   for (long long i = 2; i * i <= n; i++) {
     if (n % i == 0){
       rea -= rea/i;

@@ -2,7 +2,7 @@
 ** Combinatorics
 *** DONE Binomial Coefficient
 *** DONE Catalan
-*** TODO Matrix Tree
+*** DONE Matrix Tree
 *** TODO Pólya Enumeration Theorem
 ** Data Structure
 *** TODO Dancing Links
@@ -76,9 +76,9 @@ tested on [[http://codeforces.com/problemset/problem/402/E][402E. Strictly Posit
 *** DONE Prime Sieve
 *** DONE Primelity Test
 ** Numerical
-*** TODO Complex
+*** DONE Complex
 *** DONE Polynomial Interpolation
-*** TODO Determinant
+*** DONE Determinant
 *** DONE Fast Fourier Transform
 [[https://en.wikipedia.org/wiki/Fast_Fourier_transform]]
 [[http://web.cs.iastate.edu/~cs577/handouts/polymultiply.pdf]]

@@ -4,10 +4,7 @@
 using namespace std;
 
 namespace ntt {
-const int mod = (119 << 23) + 1, root = 3; // = 998244353
-// For p < 2^30 there is also e.g. (5 << 25, 3), (7 << 26, 3),
-// (479 << 21, 3) and (483 << 21, 5). The last two are > 10^9.
-
+  
 int revv(int x, int bits) {
   int ret = 0;
   for (int i = 0; i < bits; i++) {
@@ -16,7 +13,7 @@ int revv(int x, int bits) {
   return ret;
 }
 
-void fft(vector<int> &a, bool rev = false) {
+void ntt(vector<int> &a, bool rev, int mod, int root) {
   int n = a.size(), bits = 32 - __builtin_clz(n) - 1;
   for (int i = 0; i < n; i++) {
     int j = revv(i, bits);
@@ -39,17 +36,21 @@ void fft(vector<int> &a, bool rev = false) {
   }
 }
 
-vector<int> convolution(const vector<int> &a, const vector<int> &b) {
+//const int mod = (119 << 23) + 1, root = 3; // = 998244353
+// For p < 2^30 there is also e.g. (5 << 25, 3), (7 << 26, 3),
+// (479 << 21, 3) and (483 << 21, 5). The last two are > 10^9.
+
+vector<int> convolution(const vector<int> &a, const vector<int> &b, int mod = (119 << 23) + 1, int root = 3) {
   int sz = (int)a.size() + (int)b.size() - 1;
   int L = sz > 1 ? 32 - __builtin_clz(sz - 1) : 0, n = 1 << L;
   vector<int> av(n), bv(n);
   copy(a.begin(), a.end(), av.begin());
   copy(b.begin(), b.end(), bv.begin());
-  fft(av), fft(bv);
+  ntt(av, false, mod, root), ntt(bv, false, mod, root);
   for (int i = 0; i < n; i++) {
     av[i] = (long long)av[i] * bv[i] % mod;
   }
-  fft(av, true);
+  ntt(av, true, mod, root);
   return av;
 }
 } // namespace ntt
