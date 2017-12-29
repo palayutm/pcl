@@ -56,6 +56,7 @@ tested on [[http://codeforces.com/contest/508/problem/D][508D. Tanya and Passwor
 tested on [[http://codeforces.com/problemset/problem/402/E][402E. Strictly Positive Matrix]]
 *** DONE Topological Sorting
 ** Misc
+*** TODO random factory
 *** DONE Big Integer
 *** TODO CDQ
 *** TODO Divide and Conquer on All Query
