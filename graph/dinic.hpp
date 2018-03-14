@@ -41,7 +41,8 @@ template <class T> struct Dinic {
     if (u == ed) return flow;
     T ret = 0;
     for (int i = 0; i < g[u].size(); i++) {
-      Edge& forward = g[u][i], back = g[forward.dest][forward.back];
+      Edge& forward = g[u][i];
+      Edge& back = g[forward.dest][forward.back];
       if (forward.cap && dis[forward.dest] == dis[u] + 1) {
         T f = dfs(forward.dest, ed, flow == -1 ? forward.cap : min(forward.cap, flow - ret));
         forward.cap -= f;

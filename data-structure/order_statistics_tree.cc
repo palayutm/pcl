@@ -24,5 +24,4 @@ int main(int argc, char *argv[]) {
   for (int i = 0; i < tree.size(); ++i) {
     cout << i << " : " << *tree.find_by_order(i) << endl;
   }
-  return 0;
 }

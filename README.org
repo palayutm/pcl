@@ -70,7 +70,7 @@ tested on [[http://codeforces.com/problemset/problem/402/E][402E. Strictly Posit
 *** DONE Extend Euclid
 *** TODO Factorization(Pollard's rho)
 *** DONE Inverse
-*** TODO Mobius
+*** DONE Mobius
 *** DONE Number-theoretic transform
 [[https://en.wikipedia.org/wiki/Discrete_Fourier_transform_(general)#Number-theoretic_transform]]
 *** DONE Prime Count Function

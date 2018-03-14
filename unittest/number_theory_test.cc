@@ -88,6 +88,23 @@ TEST_CASE("Prime Sieve (under 1e6)") {
   }
 }
 
+TEST_CASE("Linear Prime Sieve Time(under 2e8)") {
+  auto is_prime = primeSieve(2e8).first;
+}
+
+TEST_CASE("Simple Prime Sieve Time(under 2e8)") {
+  std::vector<bool> prime(2e8 + 1);
+  std::vector<int> prime_list;
+  for (int i = 2; i <= 200000000; i++) {
+    if (!prime[i]) {
+      prime_list.push_back(i);
+      for (int j = i; (long long)j * i <= 200000000; j++) {
+        prime[j * i] = true;
+      }
+    }
+  }
+} 
+
 TEST_CASE("Primelity Test (under 1e12, random 1000 case)") {
   for (int i = 0; i < 1000; i++) {
     long long n = RandomFactory::randomInteger(1, 1e12);

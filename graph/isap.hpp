@@ -33,7 +33,7 @@ template <class T> struct ISAP {
         if (ret == flow) return ret;
       }
     }
-    if (!(--vd[d[u]])) d[st] = g.size() + 2;
+    if (!(--vd[d[u]])) d[st] = g.size();
     vd[++d[u]]++;
     return ret;
   }
